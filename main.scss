@@ -1,0 +1,74 @@
+body{
+    height: 100vh;
+    background: linear-gradient(rgb(198, 158, 158),rgb(180, 180, 120)) no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .container{
+        // background-color: aliceblue;
+        width: 350px;
+        // height: 300px;
+        .add-task-container{
+            background-color: antiquewhite;
+            padding: 10px;
+            display: flex;
+            border-radius: 10px;
+        }
+    }
+}
+.add-task-container{
+    margin-bottom: 20px;
+    input{
+        flex:5;
+        padding: 5px;
+        font-size: 20px;
+        margin-right: 5px;
+        border-radius: 5px;
+    }
+    button{
+        flex: 1;
+        border-radius: 5px;
+        background-color: aliceblue;
+        font-size: 1.3rem;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover{
+            background-color: aqua;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+#task-container{
+    background-color:rgba(245, 245, 245,0.3);
+    border-radius: 10px;
+    
+    .task{
+        display: flex;
+        padding: 10px;
+        margin: 10px 0;
+        justify-content: space-between;
+        background-color: azure;
+        border-radius: 10px;
+        li{
+            list-style: none;
+            flex: 8;
+            font-size: 1.3rem;
+        }
+        .checkTask,.deleteTrash{
+            background-color: aqua;
+            font-size: 1.3rem;
+            margin-right: 3px;
+            flex: 1;
+            transition: 0.5s;
+            position: relative;
+        }
+        .checkTask:active,.deleteTrash:active{
+            top: 2px;
+        }
+        .deleteTrash{
+            background-color: rgb(255, 8, 8);
+        }
+    }
+}
